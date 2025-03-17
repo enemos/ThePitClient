@@ -10,7 +10,7 @@
       https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/1275039-macro-keybind-mod<br/>
       https://mkb.ddoerr.com/docs/actions<br/>
       https://macromod.market/editor<br/>
-      Ce mod utilise les fichiers contenus dans `liteconfig/common/macros` et les exécute.<br/>
+      Ce mod utilise les fichiers .txt contenus dans `liteconfig/common/macros` et les exécute.<br/>
       **Les modules :** Les modules dans le dossier `liteconfig/common/macros/modules` peuvent être retrouvés ici : https://spthiel.github.io/Modules/<br/>
 
     
