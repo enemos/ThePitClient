@@ -1,0 +1,37 @@
+playsound("entity.item.pickup")
+
+lograw({"text":"------------------------------------------------------","color":"gray"})
+
+
+if(@carepackage)
+    lograw(["",{"text":"Care Package ","color":"gold"},{"text":"module is ","color":"yellow"},{"text":"Enabled ","bold":true,"color":"green"}])
+else
+    lograw(["",{"text":"Care Package ","color":"gold"},{"text":"module is ","color":"yellow"},{"text":"Disabled ","bold":true,"color":"red"}])
+endif
+
+if(@mathsgenius)
+    lograw(["",{"text":"Maths Genius ","color":"light_purple"},{"text":"module is ","color":"yellow"},{"text":"Enabled ","bold":true,"color":"green"}])
+else
+    lograw(["",{"text":"Maths Genius ","color":"light_purple"},{"text":"module is ","color":"yellow"},{"text":"Disabled ","bold":true,"color":"red"}])
+endif
+
+if(@sewerrat)
+    lograw(["",{"text":"Sewer Rat ","color":"dark_aqua"},{"text":"module is ","color":"yellow"},{"text":"Enabled ","bold":true,"color":"green"}])
+else
+    lograw(["",{"text":"Sewer Rat ","color":"dark_aqua"},{"text":"module is ","color":"yellow"},{"text":"Disabled ","bold":true,"color":"red"}])
+endif
+
+if(@antiafk)
+    lograw(["",{"text":"Anti-AFK ","color":"gray"},{"text":"module is ","color":"yellow"},{"text":"Enabled ","bold":true,"color":"green"}])
+else
+    lograw(["",{"text":"Anti-AFK ","color":"gray"},{"text":"module is ","color":"yellow"},{"text":"Disabled ","bold":true,"color":"red"}])
+endif
+
+if(@autorejoinpit)
+    lograw(["",{"text":"Auto Rejoin Pit ","color":"gold"},{"text":"module is ","color":"yellow"},{"text":"Enabled ","bold":true,"color":"green"}])
+else
+    lograw(["",{"text":"Auto Rejoin Pit ","color":"gold"},{"text":"module is ","color":"yellow"},{"text":"Disabled ","bold":true,"color":"red"}])
+endif
+
+
+lograw({"text":"------------------------------------------------------","color":"gray"})

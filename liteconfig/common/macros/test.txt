@@ -1,0 +1,16 @@
+log("&8Scripts : &6Test !")
+&bab = "Hello uwu"
+
+ifbeginswith(%&bab%,"Hello")
+    log("1")
+endif
+
+
+ifcontains(%&bab%,"owo")
+    log("2")
+elseifcontains(%&bab%,"uwu")
+    log("3")
+endif
+
+test = isrunning("antiafk")
+stop(antiafk)

@@ -1,0 +1,12 @@
+&chestname = getchestname()
+if((&chestname == "Chest") && (@carepackage) && (%GUI% == "GUICHEST"))
+    exec("carePackage.txt")
+endif
+
+if((&chestname == "Chest") && (@sewerrat) && (%GUI% == "GUICHEST"))
+    exec("sewerChest.txt")
+endif
+
+if(((%GUI% == "GUIINVENTORY") || (%GUI% == "GUICHEST")) && (BARITONE))
+    baritone(stop)
+endif

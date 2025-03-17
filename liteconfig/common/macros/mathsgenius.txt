@@ -1,0 +1,4 @@
+random(#delay,24,42)
+eval(#result,%@&differentialequation%)
+wait(%#delay%t)
+echo(%#result%)

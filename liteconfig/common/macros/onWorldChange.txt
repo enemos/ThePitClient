@@ -1,0 +1,2 @@
+wait(10t)
+echo("/whereami")

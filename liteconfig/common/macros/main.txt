@@ -1,0 +1,15 @@
+exec("stop.txt")
+log("&8Scripts : &5main")
+
+reconnect("on")
+reconnect(10)
+
+&lastgui = %GUI%
+exec(antiAfk.txt,"antiafk")
+
+do
+    if(&lastgui != %GUI%)
+        exec("onShowGui.txt","onShowGui")
+        &lastgui = %GUI%  
+    endif
+while(true)

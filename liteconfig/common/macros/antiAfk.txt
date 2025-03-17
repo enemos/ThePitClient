@@ -1,0 +1,9 @@
+do
+    if(@antiafk)
+        random(#x,7,10)
+        random(#z,7,10)
+        goto(%#x%,114,%#z%)
+        lograw(["",{"text":"[","color":"dark_gray"},{"text":"Anti-AFK","color":"gray"},{"text":"]","color":"dark_gray"},{"text":" Going to "},{"text":"%#x% ","color":"red"},{"text":"114 ","color":"green"},{"text":"%#z%","color":"blue"}])
+        wait(30)
+    endif
+while(true)

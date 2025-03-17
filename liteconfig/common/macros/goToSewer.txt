@@ -1,0 +1,8 @@
+if(@sewerrat)
+    @sewerchestfound = true
+    baritone(stop)
+    wait(3t)
+    goto(68,58,50)
+else
+    lograw(["",{"text":"The ","color":"yellow"},{"text":"Sewer Rat ","color":"dark_aqua"},{"text":"module is ","color":"yellow"},{"text":"Disabled","color":"red","bold":true}])
+endif

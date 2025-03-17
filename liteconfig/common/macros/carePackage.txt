@@ -1,0 +1,22 @@
+// Liste des items : Ordre de priorité = ordre dans la liste. Attention à bien mettre ["nombre"].
+&items[0] = "golden_sword"
+&items[1] = "bow"
+&items[2] = "leather_leggings"
+&items[3] = "diamond_leggings"
+&items[4] = "diamond_helmet"
+&items[5] = "gold_ingot"
+&items[6] = "experience_bottle"
+&items[7] = "diamond_chestplate"
+&items[8] = "diamond_boots"
+
+unsafe(0)
+    foreach(&items[],&item)
+        do
+            getslot(%&item%,#slotid)
+            if((#slotid < 27) && (#slotid != -1))
+                slotclick(%#slotid%,left,1)
+                wait(1t)
+            endif
+        while((#slotid != -1) && (#slotid < 27) && (%GUI% == "GUICHEST"))
+    next
+endunsafe

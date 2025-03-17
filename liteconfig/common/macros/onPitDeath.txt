@@ -1,0 +1,3 @@
+if(@sewerrat)
+    exec("gotosewer.txt")
+endif

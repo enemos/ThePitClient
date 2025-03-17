@@ -1,0 +1,58 @@
+if(@&togglingmodule == "carepackage")
+    toggle(@carepackage)
+    if(@carepackage)
+        lograw(["",{"text":"Enabled ","bold":true,"color":"green"},{"text":"the ","color":"yellow"},{"text":"Care Package ","color":"gold"},{"text":"module.","color":"yellow"}])
+        playsound(entity.arrow.hit_player)
+    else
+        lograw(["",{"text":"Disabled ","bold":true,"color":"red"},{"text":"the ","color":"yellow"},{"text":"Care Package ","color":"gold"},{"text":"module.","color":"yellow"}])
+        playsound(entity.armorstand.place)
+    endif   
+endif
+
+if(@&togglingmodule == "mathsgenius")
+    toggle(@mathsgenius)
+    if(@mathsgenius)
+        lograw(["",{"text":"Enabled ","bold":true,"color":"green"},{"text":"the ","color":"yellow"},{"text":"Maths Genius ","color":"light_purple"},{"text":"module.","color":"yellow"}])
+        playsound(entity.arrow.hit_player)
+    else
+        lograw(["",{"text":"Disabled ","bold":true,"color":"red"},{"text":"the ","color":"yellow"},{"text":"Maths Genius ","color":"light_purple"},{"text":"module.","color":"yellow"}])
+        playsound(entity.armorstand.place)
+    endif   
+endif
+
+if(@&togglingmodule == "sewerrat")
+    toggle(@sewerrat)
+    if(@sewerrat)
+        lograw(["",{"text":"Enabled ","bold":true,"color":"green"},{"text":"the ","color":"yellow"},{"text":"Sewer Rat ","color":"dark_aqua"},{"text":"module.","color":"yellow"}])
+        exec("goToSewer.txt")
+        playsound(entity.arrow.hit_player)
+    else
+        lograw(["",{"text":"Disabled ","bold":true,"color":"red"},{"text":"the ","color":"yellow"},{"text":"Sewer Rat ","color":"dark_aqua"},{"text":"module.","color":"yellow"}])
+        baritone(stop)
+        playsound(entity.armorstand.place)
+    endif   
+endif
+
+if(@&togglingmodule == "antiafk")
+    toggle(@antiafk)
+    if(@antiafk)
+        lograw(["",{"text":"Enabled ","bold":true,"color":"green"},{"text":"the ","color":"yellow"},{"text":"Anti-AFK ","color":"gray"},{"text":"module.","color":"yellow"}])
+        playsound(entity.arrow.hit_player)
+    else
+        lograw(["",{"text":"Disabled ","bold":true,"color":"red"},{"text":"the ","color":"yellow"},{"text":"Anti-AFK ","color":"gray"},{"text":"module.","color":"yellow"}])
+        playsound(entity.armorstand.place)
+    endif
+endif
+
+if(@&togglingmodule == "autorejoinpit")
+    toggle(@autorejoinpit)
+    if(@autorejoinpit)
+        lograw(["",{"text":"Enabled ","bold":true,"color":"green"},{"text":"the ","color":"yellow"},{"text":"Auto Rejoin Pit ","color":"gold"},{"text":"module.","color":"yellow"}])
+        playsound(entity.arrow.hit_player)
+    else
+        lograw(["",{"text":"Disabled ","bold":true,"color":"red"},{"text":"the ","color":"yellow"},{"text":"Auto Rejoin Pit ","color":"gold"},{"text":"module.","color":"yellow"}])
+        playsound(entity.armorstand.place)
+    endif
+endif
+
+@&togglingmodule = ""

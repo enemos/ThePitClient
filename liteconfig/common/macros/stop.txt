@@ -1,0 +1,3 @@
+log("&8Scripts : &4Stop")
+stop("all")
+@main = false

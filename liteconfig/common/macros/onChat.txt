@@ -1,0 +1,49 @@
+ifbeginswith(%CHATCLEAN%,"QUICK MATHS! Solve: ")
+    if(@mathsgenius)
+        &equationmessage[] = split("QUICK MATHS! Solve: ",%CHATCLEAN%)
+        join(,&equationmessage[],@&differentialequation)
+        exec("mathsgenius.txt")
+    endif
+endif
+
+ifbeginswith(%CHATCLEAN%,"Sewers! A new")
+    if(@sewerrat)
+        exec("sewerRat.txt","swerrat")
+    endif
+endif
+
+ifbeginswith(%CHATCLEAN%,"Sewers! [")
+    if(@sewerrat)
+        @sewerchestfound = true
+    endif
+endif
+
+ifbeginswith(%CHATCLEAN%,"DEATH!")
+    exec("onPitDeath.txt")
+endif
+
+ifbeginswith(%CHATCLEAN%,"You are currently connected to server")
+    ifcontains(%CHATCLEAN%,"dynamiclobby")
+        baritone(stop)
+        stop("sewerrat")
+        if(@autorejoinpit)
+            lograw(["",{"text":"[Auto Rejoin Pit] ","color":"gold"},{"text":"Rejoining pit in 10 seconds...","color":"yellow"}])
+            wait(10)
+            echo("/play pit")
+        endif
+    endif
+
+    ifcontains(%CHATCLEAN%,"mega")
+        if(@sewerrat)
+            wait(2)
+            exec("goToSewer.txt","gotosewer")
+        endif
+    endif
+endif
+
+if((%CHATCLEAN% == "You are currently in limbo") && (@autorejoinpit))
+    baritone(stop)
+    lograw(["",{"text":"[Auto Rejoin Pit] ","color":"gold"},{"text":"Leaving this strange place...","color":"light_purple"}])
+    wait(1)
+    echo("/l")
+endif
